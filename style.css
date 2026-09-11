@@ -146,7 +146,7 @@ body.is-sealed .page { visibility: hidden; }
 .ph img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; pointer-events: none; border-radius: 2px; }
 .ph--sq img { aspect-ratio: 4 / 5; }
 .ph--call img { aspect-ratio: 3 / 5; object-position: top; }
-.ph--wide { width: min(84vw, 420px); } .ph--wide img { aspect-ratio: 4 / 3; }
+.ph--wide { width: min(84vw, 420px); } .ph--wide img { aspect-ratio: 991 / 896; }
 .ph figcaption { margin-top: 10px; font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); line-height: 1.5; }
 
 /* today */
