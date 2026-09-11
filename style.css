@@ -296,7 +296,7 @@ textarea:focus { outline: 2px solid var(--pink); }
 .lb__nav { bottom: 6px; } .lb__prev { left: 10px; } .lb__next { right: 10px; }
 
 /* footer */
-.foot { margin-top: clamp(64px, 10vw, 120px); display: flex; justify-content: space-between; gap: 24px; align-items: end; }
+.foot { margin-top: clamp(64px, 10vw, 120px); display: flex; justify-content: flex-end; }
 
 /* fx */
 .fx { position: fixed; inset: 0; z-index: 50; pointer-events: none; width: 100%; height: 100%; display: none; }
