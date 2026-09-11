@@ -119,7 +119,7 @@
 
   /* Hugs */
   let hugs = 0;
-  const hugLines = ['Hug dispensed. No receipt needed.', 'Second hug. Longer this time.', 'Third hug. The squeeze kind.', 'Hug four. Still unlimited. Still free.', 'Hug five. You are farming hugs now.', 'Hug six. Fine. Take them all.'];
+  const hugLines = ['Hug dispensed. No receipt needed.', 'Second hug. Longer this time.', 'Third hug. The squeeze kind.', 'Hug four. Still unlimited. Still free.', 'Hug five. You are collecting these now.', 'Hug six. Fine. Take them all.'];
   const hugBtn = $('#hugBtn');
   hugBtn.addEventListener('click', () => {
     hugs++; haptic([10, 30, 10]);
@@ -227,7 +227,7 @@
   const find = (key, msg, ms) => { const first = !found.has(key); found.add(key); toast(msg, ms); if (first) { try { localStorage.setItem('found-' + key, '1'); } catch (_) {} } };
 
   // 1. The 14 on the envelope
-  $('#egg14').addEventListener('click', (e) => { e.stopPropagation(); find('14', '14, because of the 14th. Every single one of them, from the first.'); });
+  $('#egg14').addEventListener('click', (e) => { e.stopPropagation(); find('14', '14, because of the 14th. Every one of them counts.'); });
 
   // 2. Polaroids have backs
   $$('.ph').forEach((ph) => ph.addEventListener('click', (e) => { if (e.defaultPrevented) return; ph.classList.toggle('is-flipped'); haptic(8); if (!found.has('backs')) { found.add('backs'); } }));
@@ -249,10 +249,10 @@
   });
 
   // 6. The moon in her own render
-  $('#sky').addEventListener('click', () => { if (tod.dataset.t !== 'night') return; find('moon', 'You drew a moon over that street. Same moon over both of us. I check most nights. I know how that sounds.'); });
+  $('#sky').addEventListener('click', () => { if (tod.dataset.t !== 'night') return; find('moon', 'You drew a moon over that street. It is the same one over both of us tonight.'); });
 
   // 7. The ticker knows about sheet 09
-  $('.ticker').addEventListener('click', () => find('ticker', 'Sheet 09. Ask me about sheet 09. I have opinions about the lashing detail at 750 mm.'));
+  $('.ticker').addEventListener('click', () => find('ticker', 'Sheet 09. The bamboo lashing detail. I keep going back to that one.'));
 
   // 8. Typing her name, or tapping the dot five times
   let typed = ''; addEventListener('keydown', (e) => { if (e.key.length !== 1) return; typed = (typed + e.key.toLowerCase()).slice(-5); if (typed === 'chotu') { find('name', 'You typed your own name. Of course you did. There are more of these.'); burst(innerWidth / 2, innerHeight / 2, 30, ['♥']); } });
